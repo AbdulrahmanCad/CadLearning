@@ -1,0 +1,454 @@
+/*  Setting the margin, padding... for all tags  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+html {
+    background-color: #eaf0f2;
+  }
+  
+  body {
+    font: 16px/1.6 Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 190px;
+  }
+  
+  header h1 {
+    font: normal 32px/1.5 "Open Sans", sans-serif;
+    color: #3f71ae;
+    padding-bottom: 16px;
+  }
+  
+  header h2 {
+    color: #f05283;
+  }
+  
+  header span {
+    color: #3f71ea;
+  }
+  
+
+/*  features for the table in the first page  */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: auto;
+  margin-top: 300px;
+}
+/*  table components features */
+table,
+th,
+td {
+  /*  black border around them with 2pixels and black color  */
+  border: 2px solid black;
+}
+/*  making th and td in the table as left text and with padding 4px  */
+th,
+td {
+  /*  setting up text to be on the left  */
+  text-align: left;
+  padding: 4px;
+}
+/* color chaniging for th  */
+th {
+  /*  green color  */
+  background-color: #4caf50;
+  color: white;
+}
+/*  color chaneging when vising a certain page and will keep having the color
+I used these colors from gred. website*/
+.navigation a:visited {
+  color: orangered;
+}
+/*  the color change for the current viewd page  */
+.navigation a.active {
+  color: chartreuse;
+}
+
+/*  tabs display attributes */
+.tabs li {
+  display: inline-block;
+  margin-right: 100px;
+  padding-right: 10px;
+}
+/*  id which has the desc of the javascript page  */
+#jsDescription {
+  margin-top: 150px;
+  text-align: center;
+  font-style: oblique;
+}
+/*  js page */
+#jsDescription h1 {
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 80px;
+}
+video {
+  object-fit: contain;
+}
+/*  js vid  */
+#jsVideo video {
+  width: 50%;
+  border: #d0ba20 5px solid;
+  margin-top: 2%;
+}
+
+/*  id which is called as top and this is in all pages making the nav bar fixed with some other features  */
+#top {
+  position: fixed;
+  height: 15%;
+  width: 100%;
+  float: left;
+  background-color: #00dbde;
+  background-image: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+  padding: 0 20px;
+  color: #fff;
+}
+
+/*  logo attributes  */
+.logo {
+  max-width: 100px;
+  margin-top: 10px;
+  float: right;
+  padding: 4px 0px;
+}
+/*  id- banner size */
+#banner {
+  width: 100%;
+  height: 60vh;
+}
+/*  banner img */
+#banner .bannerImg {
+  height: 100%;
+  width: 100%;
+}
+/* logo img  */
+.logo img {
+  max-width: 50%;
+}
+/*  navigation menu in all pages  */
+.navigation {
+  margin: 0px;
+  float: right;
+  position: fixed;
+}
+
+/*  lisits inside nav menu  */
+.navigation li {
+  list-style: none;
+  float: left;
+}
+/*  links in nav */
+.navigation li a {
+  color: #fff;
+  padding: 20px 12px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+/*  itelic which contains the awesome font icons  */
+.navigation li a i {
+  width: 100%;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+/*  show and hide buttons which appear for resp. website  */
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+/*   css page style for images   */
+.cssImages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cssImages img {
+  height: 500px;
+}
+/*  The button(burger) that show the menu making it droped down*/
+.show-menu-btn {
+  margin: 0px;
+  float: right;
+}
+/* the style of i in the menu*/
+.show-menu-btn i {
+  line-height: 100px;
+}
+.navigation a:hover {
+  color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #bcc0d1 0%,
+    #9398b2 30%,
+    #8791a8 66%,
+    #ffffff 100%
+  );
+}
+
+.show-menu-btn:hover,
+.hide-menu-btn:hover {
+  color: #4158d0;
+}
+#toggle-btn {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: orange;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: lightseagreen;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive CSS */
+@media screen and (max-width: 767px) {
+  .show-menu-btn,
+  .hide-menu-btn {
+    display: block;
+  }
+  .navigation {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #8bc6ec;
+    background-image: linear-gradient(135deg, #8bc6ec 0%, #9599e2 100%);
+    top: -100%;
+    left: 0;
+    padding: 50px 0px;
+    transition: 1.3s;
+  }
+  .navigation li {
+    width: 100%;
+  }
+  .navigation li a {
+    padding: 15px 15px;
+    text-align: left;
+    color: red;
+  }
+  .navigation a:hover {
+    color: red;
+    background-image: none;
+  }
+  .navigation li a i {
+    width: auto;
+    font-size: 20px;
+  }
+  .hide-menu-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+  #toggle-btn:checked ~ nav .navigation {
+    top: 0px;
+  }
+}
+
+/* The footer is fixed to the bottom of the page */
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+@media (max-height: 800px) {
+  footer {
+    position: static;
+  }
+  header {
+    padding-top: 40px;
+  }
+}
+
+.footer-all {
+  background-color: #2c292f;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+  margin-top: 80px;
+}
+
+.footer-all .footer-left,
+.footer-all .footer-center,
+.footer-all .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-all .footer-left {
+  width: 30%;
+}
+
+.footer-all h3 {
+  color: #ffffff;
+  font: normal 36px "Cookie", cursive;
+  margin: 0;
+}
+
+/* The company logo */
+
+.footer-all .footer-left img {
+  width: 30%;
+}
+
+.footer-all h3 span {
+  color: #e0ac1c;
+}
+
+/* Footer links */
+
+.footer-all .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+}
+
+.footer-all .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-all .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-all .footer-center {
+  width: 35%;
+}
+
+.footer-all .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-all .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-all .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-all .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-all .footer-center p a {
+  color: #e0ac1c;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-all .footer-right {
+  width: 30%;
+}
+
+.footer-all .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-all .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-all .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-all .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* Here is the code for Responsive Footer */
+/* You can remove below code if you don't want Footer to be responsive */
+
+@media (max-width: 880px) {
+  .footer-all .footer-left,
+  .footer-all .footer-center,
+  .footer-all .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-all .footer-center i {
+    margin-left: 0;
+  }
+}
